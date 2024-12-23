@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Breast Cancer Prediction</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+<body>
+
+
+    <div class="logo">
+        <img src="{{ url_for('static', filename='logo_remove_bg.png')}}">
+        <h3>BCP</h3>
+    </div>
+    <h1 class="webTitle">Breast Cancer Prediction Model</h1>
+    <div class="siteImg">
+        <img src="{{ url_for('static', filename='image1.PNG')}}">
+    </div>
+    <form action="/predict" method="post">
+        <div class="container">
+            <label>Input all medical Breast Cancer Features</label><br>
+            <p style="width: 500px; font-size: 22px; text-align: justify; background-color: rgb(147, 250, 224);">[Radius_mean,	texture_mean, perimeter_mean,	area_mean,	smoothness_mean,	compactness_mean,	concavity_mean,	concave points_mean,	radius_worst,	texture_worst,	perimeter_worst,	area_worst,	smoothness_worst,	compactness_worst,	concavity_worst,	concave points_worst,	symmetry_worst,	fractal_dimension_worst]</p><br>
+            <input type="text" placeholder="Enter Features (comma-separated)" name="features" required><br>
+            <button type="submit">Predict</button>
+        </div>
+    </form>
+
+    {% if message %}
+        {% for i in message %}
+            {% if i == "cancerous" %}
+                <div class="card">
+                    <img src="{{ url_for('static', filename='image3.jpg') }}" class="card_img_top" alt="Cancerous">
+                    <div class="card_body">
+                        <h5 class="card_title">Cancerous</h5>
+                        <p class="card-text">Based on the features, the result indicates a likelihood of breast cancer.</p>
+                    </div>
+                </div>
+            {% else %}
+                <div class="card">
+                    <img src="{{ url_for('static', filename='image2.jpg') }}" class="card_img_top" alt="Non Cancerous">
+                    <div class="card_body">
+                        <h5 class="card_title">Non Cancerous</h5>
+                        <p class="card-text">Based on the features, the result indicates no significant likelihood of breast cancer.</p>
+                    </div>
+                </div>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
+
+
+    <div class="siteImg endImg">
+        <img src="{{ url_for('static', filename='last.jpg')}}">
+        <img src="{{ url_for('static', filename='last.jpg')}}">
+        <img src="{{ url_for('static', filename='last.jpg')}}">
+        <img src="{{ url_for('static', filename='last.jpg')}}">
+        <img src="{{ url_for('static', filename='last.jpg')}}">
+    </div>
+    
+</body>
+</html>

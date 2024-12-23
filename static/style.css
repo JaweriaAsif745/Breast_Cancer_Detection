@@ -1,0 +1,113 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(23, 9, 86);
+}
+
+
+.logo{
+    margin: 15px;
+    display: flex;
+}
+.logo img{
+    height: 45px;
+}
+.logo h3{
+    color: white;
+    font-size: 30px;
+}
+
+.webTitle{
+    font-size: 45px;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.siteImg{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 50px auto;
+}
+
+.siteImg img{
+    height: 250px;
+}
+
+.endImg img{
+    height: 130px;
+}
+
+.container{
+    margin: 20px auto;
+    /* width: 700px; */
+    height: 400px;
+    background-color: rgb(154, 215, 233);
+    /* background-color: rgb(117, 148, 157); */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+label {
+    margin-bottom: 10px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+input {
+    width: 80%;     
+    height: 40px;    
+    font-size: 16px; 
+    padding: 5px;    
+    border: 1px solid #ccc;
+    border-radius: 5px; 
+}
+.container button{
+    font-size: 22px;
+    font-weight: 500;
+    padding: 5px 10px;
+    background-color: aliceblue;
+
+}
+
+.container button:hover{
+    background-color: rgb(144, 146, 146);
+
+}
+
+.card{
+    text-align: center;
+    padding: 15px;
+    margin: 40px auto;
+    background-color: antiquewhite;
+    height: 350px;
+    width: 700px;
+    max-width: none;
+}
+
+.card img{
+    width: 300px;
+    height: 250px;
+    border: 1.5px solid black;
+    padding: 3px;
+}
+.card_title{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.card-text{
+    font-size: 20px;
+    color: #4a4949;
+    width: 500px;
+    margin: auto;
+}
