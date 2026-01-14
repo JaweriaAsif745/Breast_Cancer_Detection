@@ -1,4 +1,4 @@
-# Breast Cancer Prediction Model
+# Breast Cancer Prediction Model:
 Developed an SVM model achieving 95% accuracy in classifying tumors as malignant or benign.
 
 
